@@ -14,15 +14,19 @@ while (opcao != 3) do #infinito diferente do for que é finito: já nasce sabend
     if(opcao == 1)
         puts 'Digite o nome da receita: '
         nome = gets.chomp()
-
-        receitas << nome
+        puts 'Digite o tipo da receita: '
+        tipo = gets.chomp()
+        receitas << {nome: nome, tipo: tipo}
         puts
         puts "Receita #{nome} cadastrada com sucesso" #puts 'Receita ' + nome + ' cadastrada com sucesso !'
+            
         puts
     elsif(opcao == 2)
         puts '=========================== Receitas Cadastradas ==========================='
 
-        puts receitas
+        receitas.each do |receita|
+            puts "#{receita[:nome]} - #{receita[:tipo]}"
+        end
 
         # for receita in receitas do --> exitem outros métodos em ruby que são mais usuais
         #     puts receita
@@ -56,6 +60,7 @@ puts 'Obrigado por usar o Cookbook, até logo'
 #3. Array - lista ordenada / Pode qualquer tipo de dado em Ruby e incomum em outras linguagens
 #4. Estruturas de Repetição
 #5. Estruturas Condicionais
+#6. Hash - dicionário
 
 
 
