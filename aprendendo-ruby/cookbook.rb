@@ -1,12 +1,20 @@
-puts 'Bem-vindo ao Cookbook, sua rede social de receitas'
+def bem_vindo()
+    puts 'Bem-vindo ao Cookbook, sua rede social de receitas'
+end
+
+bem_vindo() #os métodos podem ter um return
+
+def menu()
+    puts '[1] Cadastrar receita'
+    puts '[2] Ver todas as receitas'
+    puts '[3] Sair'
+
+    print 'Escolha uma opção: '    
+end
 
 receitas = []
 
-puts '[1] Cadastrar receita'
-puts '[2] Ver todas as receitas'
-puts '[3] Sair'
-
-print 'Escolha uma opção: '
+menu()
 opcao = gets.to_i() #valor de gets é um texto e não um número e nesse caso precisa transformar
 
 while (opcao != 3) do #infinito diferente do for que é finito: já nasce sabendo quantas vezes ele vai rodar. O do também é opcional
@@ -40,27 +48,19 @@ while (opcao != 3) do #infinito diferente do for que é finito: já nasce sabend
     else 
         puts 'Opção inválida'
     end
-    puts '[1] Cadastrar receita'
-    puts '[2] Ver todas as receitas'
-    puts '[3] Sair'
-
-    print 'Escolha uma opção: '
+    menu()
     opcao = gets.to_i()
 end
 
 puts 'Obrigado por usar o Cookbook, até logo'
-
             
-
-
-
-
-
 
 #3. Array - lista ordenada / Pode qualquer tipo de dado em Ruby e incomum em outras linguagens
 #4. Estruturas de Repetição
 #5. Estruturas Condicionais
 #6. Hash - dicionário
+#7. Métodos
+
 
 
 
